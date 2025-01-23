@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='x-logo.JPEG') }}" alt="X Logo" class="logo-image">
+            Sentiment Analysis
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Result Section -->
+    <section class="result-section">
+        <h1>Sentiment Analysis Result</h1>
+        <div class="result-box">
+            <p><strong>Text:</strong> {{ text }}</p>
+            <p><strong>Sentiment:</strong> <span id="sentiment">{{ sentiment }}</span></p>
+            <p><span id="emoji" class="emoji"></span></p>
+        </div>
+
+        <a href="/" class="btn">Go Back</a>
+    </section>
+
+    <script>
+        // Function to handle the sentiment analysis result and display it
+        function handleResult(sentiment) {
+            // Set the sentiment label and emoji
+            const sentimentElement = document.getElementById('sentiment');
+            const emojiElement = document.getElementById('emoji');
+
+            let sentimentEmoji;
+            let sentimentLabel;
+
+            // Determine sentiment value and label based on the sentiment
+            if (sentiment === 'positive') {
+                sentimentEmoji = '😊'; // Positive emoji
+                sentimentLabel = 'Positive';
+            } else if (sentiment === 'negative') {
+                sentimentEmoji = '😡'; // Negative emoji
+                sentimentLabel = 'Negative';
+            } else {
+                sentimentEmoji = '😐'; // Neutral emoji
+                sentimentLabel = 'Neutral';
+            }
+
+            // Update the sentiment label and emoji on the page
+            sentimentElement.textContent = sentimentLabel;
+            emojiElement.textContent = sentimentEmoji;
+        }
+
+        // Initialize the result when the page is loaded
+        window.onload = function() {
+            const sentiment = "{{ sentiment }}"; // Pass the sentiment from Flask to the template
+            handleResult(sentiment); // Call the function with the sentiment value
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar .navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Image Styling */
+.navbar .logo-image {
+    width: 40px; /* Reduced size for a smaller logo */
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ffd700;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Form Section */
+.form-section {
+    text-align: center;
+    padding: 20px;
+}
+
+textarea {
+    width: 80%;
+    height: 100px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #ffd700;
+    border: none;
+    color: #1e3c72;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #fcd34d;
+}
+
+/* Result Section */
+.result-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.result-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.sentiment {
+    font-size: 1.5rem;
+    color: #ffd700;
+}
+
+.emoji {
+    font-size: 2rem;
+    margin-left: 10px;
+}
+
+/* Emoji Legend Styling */
+.emoji-legend {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.emoji-legend h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #ffd700;
+}
+
+.legend-box p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.legend-box .emoji {
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #1e3c72;
+    border: 2px solid #ffd700;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #2a5298;
+}

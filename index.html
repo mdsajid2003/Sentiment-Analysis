@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='x-logo.JPEG') }}" alt="X Logo" class="logo-image">
+            Sentiment Analysis
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#analyze">Analyze</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Welcome to Sentiment Analysis</h1>
+        <p>Analyze the sentiment of tweets with our advanced BERT model.</p>
+    </section>
+
+    <!-- Sentiment Analysis Form -->
+    <section id="analyze" class="form-section">
+        <h2>Enter Text for Sentiment Analysis</h2>
+        <form action="/analyze" method="POST">
+            <textarea name="text" placeholder="Enter your text here..." required></textarea>
+            <button type="submit">Analyze</button>
+        </form>
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+    </section>
+
+    <!-- Emoji Legend Section -->
+    <section class="emoji-legend">
+        <h2>Sentiment Legend</h2>
+        <div class="legend-box">
+            <p><span class="emoji">😊</span> Positive Sentiment</p>
+            <p><span class="emoji">😐</span> Neutral Sentiment</p>
+            <p><span class="emoji">😡</span> Negative Sentiment</p>
+        </div>
+    </section>
+
+    <!-- Emoji Example Section -->
+    <section class="emoji-examples">
+        <h2>Examples</h2>
+        <div class="example-box">
+            <p><span class="emoji">😊</span> Positive Example: "I love this product!"</p>
+            <p><span class="emoji">😐</span> Neutral Example: "This product is okay." </p>
+            <p><span class="emoji">😡</span> Negative Example: "I hate this product!"</p>
+        </div>
+    </section>
+</body>
+</html>
