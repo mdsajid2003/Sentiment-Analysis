@@ -1,129 +1,114 @@
-# Sentiment Analysis
+# 🧠 Sentiment Analysis
 
-## Overview
+![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-2.x-000000?style=for-the-badge&logo=flask&logoColor=white)
+![BERT](https://img.shields.io/badge/BERT-HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![Twilio](https://img.shields.io/badge/Twilio-WhatsApp-F22F46?style=for-the-badge&logo=twilio&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)
 
-Sentiment Analysis is a Natural Language Processing (NLP) project that analyzes textual data and classifies sentiments into categories such as positive, negative, or neutral. The project demonstrates how machine learning techniques can be applied to understand user opinions, customer feedback, reviews, and social media content.
+> A real-time sentiment analysis web app that classifies text as **Positive**, **Negative**, or **Neutral** using a fine-tuned BERT model — with WhatsApp alerts via Twilio for negative sentiment.
 
-The objective is to transform unstructured text into meaningful insights that can support decision-making and data-driven analysis.
+---
 
-## Features
+## ✨ Features
 
-* Text preprocessing and cleaning
-* Sentiment classification
-* Positive, negative, and neutral sentiment detection
-* Data visualization and analysis
-* Machine Learning-based prediction
-* NLP pipeline implementation
-* Scalable and reusable workflow
+- 🔍 **BERT-based NLP** — deep learning model for accurate sentiment classification
+- 🌐 **Flask Web App** — clean UI to enter text and view results instantly
+- 📲 **WhatsApp Notifications** — automatically alerts via Twilio when negative sentiment is detected
+- 📊 **Twitter Dataset** — trained on 74,000+ labelled tweets
+- ⚡ **Real-time Prediction** — instant results on any text input
 
-## Tech Stack
+---
 
-* Python
-* Natural Language Processing (NLP)
-* Machine Learning
-* Pandas
-* NumPy
-* Scikit-learn
-* Matplotlib
-* Jupyter Notebook
+## 🖥️ Demo
 
-## Project Workflow
+> Enter any text → get instant sentiment prediction → negative results trigger a WhatsApp alert
 
-### 1. Data Collection
+![Demo](https://via.placeholder.com/800x400?text=Add+a+screenshot+here)
 
-Gather textual data from reviews, feedback, social media posts, or datasets.
+---
 
-### 2. Data Preprocessing
+## 🛠️ Tech Stack
 
-* Remove punctuation
-* Convert text to lowercase
-* Remove stopwords
-* Tokenization
-* Text normalization
+| Layer | Technology |
+|---|---|
+| Language | Python 3.9+ |
+| Web Framework | Flask |
+| NLP Model | BERT (HuggingFace Transformers) |
+| Notifications | Twilio WhatsApp API |
+| Data Processing | Pandas, NumPy |
+| ML Library | Scikit-learn |
+| Frontend | HTML, CSS |
 
-### 3. Feature Engineering
+---
 
-Transform textual data into numerical representations using techniques such as:
+## 📁 Project Structure
 
-* Bag of Words (BoW)
-* TF-IDF Vectorization
-
-### 4. Model Training
-
-Train machine learning models to classify sentiments.
-
-### 5. Prediction
-
-Analyze unseen text and predict sentiment categories.
-
-## Installation
-
-### Clone the Repository
-
-```bash id="6tzd4s"
-git clone https://github.com/mdsajid2003/Sentimemt_Analysis.git
-cd Sentimemt_Analysis
+```
+Sentiment-Analysis/
+├── app.py                    # Flask web application
+├── bert_model.py             # BERT model loading & prediction
+├── train.py                  # Model training script
+├── preprocess.py             # Text preprocessing pipeline
+├── data_loader.py            # Dataset utilities
+├── twitter_training.csv      # Training dataset (74k+ tweets)
+├── twitter_validation.csv    # Validation dataset
+├── index.html                # Home page UI
+├── result.html               # Results page UI
+├── styles.css                # Styling
+└── requirements.txt
 ```
 
-### Install Dependencies
+---
 
-```bash id="k4jlwm"
+## 🚀 Getting Started
+
+### Prerequisites
+- Python 3.9+
+- pip
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/mdsajid2003/Sentiment-Analysis.git
+cd Sentiment-Analysis
+
+# Install dependencies
 pip install -r requirements.txt
+
+# Run the app
+python app.py
 ```
 
-### Run the Project
+Open your browser at `http://localhost:5000`
 
-```bash id="j2te7s"
-python main.py
-```
+---
 
-> Update the execution command if your project uses a Jupyter Notebook or a different entry file.
+## 📊 Dataset
 
-## Project Structure
+Twitter Entity Sentiment dataset with **74,000+ labelled tweets** across Positive, Negative, and Neutral categories.
 
-```text id="w8s1je"
-Sentimemt_Analysis/
-├── dataset/
-├── notebooks/
-├── models/
-├── outputs/
-├── requirements.txt
-├── main.py
-└── README.md
-```
+Source: [Kaggle — Twitter Entity Sentiment Analysis](https://www.kaggle.com/datasets/jp797498e/twitter-entity-sentiment-analysis)
 
-## Applications
+---
 
-* Customer review analysis
-* Product feedback evaluation
-* Social media monitoring
-* Brand reputation management
-* Market research
-* Opinion mining
+## 🔮 Future Improvements
 
-## Results
+- [ ] Deploy on Render / HuggingFace Spaces
+- [ ] Add multi-language support
+- [ ] Real-time sentiment dashboard with charts
+- [ ] Fine-tune on domain-specific datasets
 
-The model analyzes text inputs and predicts sentiment labels, enabling users to quickly understand the overall emotional tone of large amounts of textual data.
+---
 
-## Future Improvements
+## 👨‍💻 Author
 
-* Deep Learning integration using LSTM and Transformers
-* Real-time sentiment analysis
-* Multi-language support
-* Web-based deployment
-* Advanced visualization dashboard
-* Higher accuracy through model optimization
+**Md Sajid**
+[![GitHub](https://img.shields.io/badge/GitHub-mdsajid2003-181717?style=flat&logo=github)](https://github.com/mdsajid2003)
 
-## Learning Outcomes
+---
 
-This project demonstrates practical experience with:
+## 📄 License
 
-* Natural Language Processing
-* Text preprocessing techniques
-* Machine Learning workflows
-* Feature extraction methods
-* Model evaluation and performance analysis
-* Data visualization
-
-```
-```
+This project is licensed under the [MIT License](LICENSE).
