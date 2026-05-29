@@ -9,10 +9,10 @@ app = Flask(__name__)
 model, tokenizer = load_model_and_tokenizer()
 
 # Twilio credentials
-ACCOUNT_SID = 'AC1affde58af20a651a4de869474219306'
-AUTH_TOKEN = '2095f91cac9585cf4cc4965a66898a51'  # Replace with your actual Auth Token
-TWILIO_WHATSAPP_FROM = 'whatsapp:+14155238886'
-TWILIO_WHATSAPP_TO = 'whatsapp:+918250538974'  # Default recipient for notifications (can be changed as needed)
+ACCOUNT_SID = 'XXXXXXXXXXXXXXXXXXXXXX'
+AUTH_TOKEN = 'XXXXXXXXXXXXXXXXXXXXX'  # Replace with your actual Auth Token
+TWILIO_WHATSAPP_FROM = 'whatsapp: XXXXXXXXX'
+TWILIO_WHATSAPP_TO = 'whatsapp: XXXXXXXXXXX'  # Default recipient for notifications (can be changed as needed)
 
 @app.route('/')
 def home():
